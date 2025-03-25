@@ -1,0 +1,144 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  position: relative;
+  font-size: var(--font-size-small);
+}
+
+.tableContainer {
+  max-height: calc(95vh - 130px);
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--color-background);
+  padding: var(--spacing-xs) var(--spacing-md);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-medium);
+}
+
+.cell {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-medium);
+}
+
+.checkCell {
+  composes: cell;
+  width: 30px;
+  text-align: center;
+}
+
+.row {
+  cursor: pointer;
+  height: 36px;
+}
+
+.row:hover {
+  background-color: var(--color-background);
+}
+
+.row--selected {
+  background-color: var(--color-background);
+}
+
+/* スタート画面 */
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: var(--spacing-xl);
+}
+
+.startScreen h1 {
+  font-size: var(--font-size-xlarge);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.startScreen h1 span {
+  color: red;
+}
+
+/* タブレットとモバイル向けのメディアクエリ */
+@media screen and (max-width: 1024px) {
+  .startScreen h1 {
+    font-size: var(--font-size-xlarge);
+  }
+  
+  .tableContainer {
+    max-height: calc(95vh - 110px);
+  }
+}
+
+/* スマートフォン向けのメディアクエリ */
+@media screen and (max-width: 768px) {
+  .startScreen {
+    height: 40vh;
+    gap: var(--spacing-lg);
+  }
+  
+  .startScreen h1 {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .tableContainer {
+    max-height: calc(95vh - 100px);
+  }
+}
+
+.startScreen button {
+  margin-top: var(--spacing-xl);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+/* スマートフォン向けのメディアクエリでbuttonGroupを調整 */
+@media screen and (max-width: 768px) {
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+}
+
+.endScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: var(--spacing-xl);
+}
+
+/* スマートフォン向けのメディアクエリでendScreenを調整 */
+@media screen and (max-width: 768px) {
+  .endScreen {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}
+
+/* バージョン情報のスタイル */
+.versionInfo {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  padding: 5px;
+} 

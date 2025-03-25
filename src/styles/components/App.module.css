@@ -1,0 +1,140 @@
+/* アプリ全体の基本スタイル */
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 漢字選択画面用のコンテナスタイル - 上部の余白を減らす */
+.kanjiSelectionContainer {
+  composes: container;
+  margin-top: 60px; /* ナビバーとの間に適切な余白を設定 */
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.navi {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.endScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.endScreenImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.endScreenButtons {
+  margin-top: 40px;
+}
+
+.trainingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.groupTrainingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* タブレット向けのメディアクエリ */
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+  }
+  
+  .title {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .endScreen {
+    margin-top: 60px;
+  }
+}
+
+/* スマートフォン向けのメディアクエリ */
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .endScreen {
+    margin-top: 50px;
+    gap: 15px;
+  }
+  
+  .endScreenButtons {
+    margin-top: 30px;
+  }
+} 
