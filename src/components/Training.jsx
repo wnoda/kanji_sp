@@ -431,6 +431,28 @@ export const Training = ({
                                 setNextAudio(audioSrc); // 次の音声として設定しておく
                             }
                         }
+                    } else if (isMounted) {
+                        // 音声準備に失敗した場合でも、集団モードなら進行させる
+                        if (state.mode === "group" && state.selectedOption === "remember") {
+                            console.log('[初期化] 音声準備失敗のためタイマーで次へ');
+                            setTimeout(() => {
+                                if (isMounted) {
+                                    setShowImage(true);
+                                    setHasPlayedAudio(true);
+                                }
+                            }, 1200);
+                        }
+                    }
+                } else if (isMounted) {
+                    // 音声が定義されていない場合でも、集団モードなら進行させる
+                    if (state.mode === "group" && state.selectedOption === "remember") {
+                        console.log('[初期化] 音声定義なしのためタイマーで次へ');
+                        setTimeout(() => {
+                            if (isMounted) {
+                                setShowImage(true);
+                                setHasPlayedAudio(true);
+                            }
+                        }, 1200);
                     }
                 }
             }
@@ -549,10 +571,12 @@ export const Training = ({
                                 await playAudio(audioSrc);
                                 setHasPlayedAudio(true);
                             } else {
-                                // 音声の準備に失敗した場合、再試行
-                                console.log('[漢字更新] 音声準備失敗、再試行');
-                                setTimeout(initializeKanji, 500);
-                                return;
+                                // 音声の準備に失敗した場合、一定時間後に画像を出す（個人モードと同様の挙動）
+                                console.log('[漢字更新] 音声準備失敗のためタイマーで次へ');
+                                setTimeout(() => {
+                                    setShowImage(true);
+                                    setHasPlayedAudio(true);
+                                }, 800);
                             }
                         }
                     } else if (isFirstKanjiAndFirstRepetition) {
