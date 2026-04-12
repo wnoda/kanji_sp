@@ -6,14 +6,14 @@ import styles from '../styles/components/Navi.module.css';
  * アラートメッセージを表示するコンポーネント
  */
 const AlertMessage = ({ message, onClose }) => {
-  return (
-    <div className={styles.alertOverlay}>
-      <div className={styles.alertBox}>
-        <p>{message}</p>
-        <button className={styles.alertButton} onClick={onClose}>OK</button>
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.alertOverlay}>
+            <div className={styles.alertBox}>
+                <p>{message}</p>
+                <button className={styles.alertButton} onClick={onClose}>OK</button>
+            </div>
+        </div>
+    );
 };
 
 /**
@@ -24,9 +24,17 @@ const AlertMessage = ({ message, onClose }) => {
  * @returns {Object} - 表示するボタンの設定
  */
 const getNavigationConfig = (state, updateFunctions, showAlert) => {
-    // 初期状態
+    // 初期状態 - 2026/01/18 変更: アプリ選択画面へ戻るボタンを追加
     if (StateCheckers.isInitialScreen(state)) {
-        return { showBackButton: false, showButtons: [] };
+        return {
+            showBackButton: true,
+            backButtonText: "アプリ選択画面",  // 2026/01/18 追加: ボタンテキストをカスタマイズ
+            backButtonAction: () => {
+                // iframe内から親ウィンドウ全体を遷移させる
+                window.top.location.href = "https://wnoda.github.io/study-portal/";
+            },
+            showButtons: []
+        };
     }
 
     // 練習方法選択画面
@@ -80,7 +88,7 @@ const getNavigationConfig = (state, updateFunctions, showAlert) => {
                                     }
                                 });
                             }
-                            
+
                             // 通常の遷移処理
                             StateTransitions.PROCEED_TO_NEXT(updateFunctions);
                         } else {
@@ -165,7 +173,7 @@ const getNavigationConfig = (state, updateFunctions, showAlert) => {
  * @param {Function} props.updateRepetition - 反復学習状態を更新する関数
  * @param {Function} props.handleRemoveKanjiSelection - 漢字選択をクリアする関数
  */
-export const Navi = ({ 
+export const Navi = ({
     state,
     updateNavigation,
     updateKanji,
@@ -206,12 +214,13 @@ export const Navi = ({
             <div className={styles.container}>
                 {/* 左側：戻るボタン */}
                 <div className={styles.leftButtons}>
+                    {/* 2026/01/18 変更: backButtonTextが設定されていればそれを表示、なければデフォルトの「＜戻る」を表示 */}
                     {config.showBackButton && (
-                        <button 
+                        <button
                             className={styles.button}
                             onClick={config.backButtonAction}
                         >
-                            ＜戻る
+                            {config.backButtonText || "＜戻る"}
                         </button>
                     )}
                 </div>
@@ -236,12 +245,11 @@ export const Navi = ({
 
             {/* アラートメッセージ */}
             {showAlertBox && (
-                <AlertMessage 
-                    message={alertMessage} 
-                    onClose={closeAlert} 
+                <AlertMessage
+                    message={alertMessage}
+                    onClose={closeAlert}
                 />
             )}
         </>
     );
 };
-  

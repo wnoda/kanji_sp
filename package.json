@@ -2,7 +2,7 @@
   "name": "0120",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/wnoda/kanji_sp",
+  "homepage": "https://wnoda.github.io/kanji_sp/",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",

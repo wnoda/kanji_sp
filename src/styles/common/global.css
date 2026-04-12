@@ -7,10 +7,31 @@
   box-sizing: border-box;
 }
 
+/* フォーム要素はデフォルトでフォントを継承しないため、明示的に継承させる */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    /* 1. Windows最優先：UDデジタル教科書体 */
+    "UD デジタル 教科書体 N",
+    "UD Digi Kyokasho N",
+    "UD デジタル 教科書体 NK-R",
+
+    /* 2. 游教科書体（Mac/Windows共通） */
+    "YuKyokasho",
+    "YuKyokasho Yoko",
+    "Yu Kyokasho",
+    "游教科書体",
+
+    /* 3. 最終手段 */
+    "Hiragino Sans",
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text);
@@ -39,4 +60,4 @@ code {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-} 
+}

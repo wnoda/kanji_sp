@@ -75,7 +75,7 @@
   .startScreen h1 {
     font-size: var(--font-size-xlarge);
   }
-  
+
   .tableContainer {
     max-height: calc(95vh - 110px);
   }
@@ -87,11 +87,11 @@
     height: 40vh;
     gap: var(--spacing-lg);
   }
-  
+
   .startScreen h1 {
     margin-bottom: var(--spacing-lg);
   }
-  
+
   .tableContainer {
     max-height: calc(95vh - 100px);
   }
@@ -141,4 +141,10 @@
   color: #666;
   text-align: right;
   padding: 5px;
-} 
+}
+
+.voiceCredit {
+  font-size: 10px;
+  color: #999;
+  margin-top: 2px;
+}
