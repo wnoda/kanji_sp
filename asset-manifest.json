@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kanji_sp/static/css/main.450fd84a.css",
-    "main.js": "/kanji_sp/static/js/main.dcd60c94.js",
+    "main.js": "/kanji_sp/static/js/main.3391a89d.js",
     "static/media/6thGrade303.jpg": "/kanji_sp/static/media/6thGrade303.b21dbedc677da76ee639.jpg",
     "static/media/5thGrade136.jpg": "/kanji_sp/static/media/5thGrade136.9e4387163627b9f9f51e.jpg",
     "static/media/2ndGrade99.jpg": "/kanji_sp/static/media/2ndGrade99.cc92d24f11dba1fc204f.jpg",
@@ -2228,10 +2228,10 @@
     "static/media/1Grade.csv": "/kanji_sp/static/media/1Grade.c8aca7c83c51192c2834.csv",
     "index.html": "/kanji_sp/index.html",
     "main.450fd84a.css.map": "/kanji_sp/static/css/main.450fd84a.css.map",
-    "main.dcd60c94.js.map": "/kanji_sp/static/js/main.dcd60c94.js.map"
+    "main.3391a89d.js.map": "/kanji_sp/static/js/main.3391a89d.js.map"
   },
   "entrypoints": [
     "static/css/main.450fd84a.css",
-    "static/js/main.dcd60c94.js"
+    "static/js/main.3391a89d.js"
   ]
 }
