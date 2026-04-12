@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kanji_sp/static/css/main.450fd84a.css",
-    "main.js": "/kanji_sp/static/js/main.9bfa4ef3.js",
+    "main.js": "/kanji_sp/static/js/main.dcd60c94.js",
     "static/media/6thGrade303.jpg": "/kanji_sp/static/media/6thGrade303.b21dbedc677da76ee639.jpg",
     "static/media/5thGrade136.jpg": "/kanji_sp/static/media/5thGrade136.9e4387163627b9f9f51e.jpg",
     "static/media/2ndGrade99.jpg": "/kanji_sp/static/media/2ndGrade99.cc92d24f11dba1fc204f.jpg",
@@ -2219,19 +2219,19 @@
     "static/media/2ndGrade100.jpg": "/kanji_sp/static/media/2ndGrade100.1233e366d69d7089c99d.jpg",
     "static/media/5thGrade215.jpg": "/kanji_sp/static/media/5thGrade215.a4d5ea579dda9abd8d0a.jpg",
     "static/media/5thGrade211.jpg": "/kanji_sp/static/media/5thGrade211.03c7c72ad845e9f27a57.jpg",
-    "static/media/4Grade.csv": "/kanji_sp/static/media/4Grade.f05baec0c08dc329369a.csv",
-    "static/media/6Grade.csv": "/kanji_sp/static/media/6Grade.d42839943ed9d8df060f.csv",
-    "static/media/5Grade.csv": "/kanji_sp/static/media/5Grade.5503b23cc33b47d40eee.csv",
-    "static/media/3Grade.csv": "/kanji_sp/static/media/3Grade.c443646498c4a27063ac.csv",
+    "static/media/4Grade.csv": "/kanji_sp/static/media/4Grade.dbf86f8741d1e0cd6034.csv",
+    "static/media/6Grade.csv": "/kanji_sp/static/media/6Grade.d6e78fc8c87680023677.csv",
+    "static/media/5Grade.csv": "/kanji_sp/static/media/5Grade.f73834bfe7a8957f7301.csv",
+    "static/media/3Grade.csv": "/kanji_sp/static/media/3Grade.1c34b09fcbe18b7b9259.csv",
     "static/media/2ndGrade79.jpg": "/kanji_sp/static/media/2ndGrade79.9bb2d6ced6da9351ea75.jpg",
-    "static/media/2Grade.csv": "/kanji_sp/static/media/2Grade.736255cab40ace472f13.csv",
-    "static/media/1Grade.csv": "/kanji_sp/static/media/1Grade.2c0ab6db95f874664408.csv",
+    "static/media/2Grade.csv": "/kanji_sp/static/media/2Grade.fb1eedbe96fac822ce19.csv",
+    "static/media/1Grade.csv": "/kanji_sp/static/media/1Grade.c8aca7c83c51192c2834.csv",
     "index.html": "/kanji_sp/index.html",
     "main.450fd84a.css.map": "/kanji_sp/static/css/main.450fd84a.css.map",
-    "main.9bfa4ef3.js.map": "/kanji_sp/static/js/main.9bfa4ef3.js.map"
+    "main.dcd60c94.js.map": "/kanji_sp/static/js/main.dcd60c94.js.map"
   },
   "entrypoints": [
     "static/css/main.450fd84a.css",
-    "static/js/main.9bfa4ef3.js"
+    "static/js/main.dcd60c94.js"
   ]
 }
